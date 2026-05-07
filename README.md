@@ -15,7 +15,6 @@ Uses stow's [`--dotfiles`](https://www.gnu.org/software/stow/manual/html_node/In
 ## Install
 
 ```sh
-git clone <repo-url> ~/Dotfiles
 cd ~/Dotfiles
 stow .
 ```
