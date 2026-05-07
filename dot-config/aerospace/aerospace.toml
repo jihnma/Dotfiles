@@ -1,0 +1,45 @@
+config-version = 2
+persistent-workspaces = ["1", "2", "3"]
+
+[gaps]
+inner.horizontal = 8
+inner.vertical = 8
+outer.left = 8
+outer.right = 8
+outer.top = 8
+outer.bottom = 8
+
+[mode.main.binding]
+ctrl-h = 'focus left'
+ctrl-j = 'focus down'
+ctrl-k = 'focus up'
+ctrl-l = 'focus right'
+
+ctrl-1 = 'workspace 1'
+ctrl-2 = 'workspace 2'
+ctrl-3 = 'workspace 3'
+
+ctrl-shift-h = 'move left'
+ctrl-shift-j = 'move down'
+ctrl-shift-k = 'move up'
+ctrl-shift-l = 'move right'
+
+ctrl-shift-1 = 'move-node-to-workspace --focus-follows-window 1'
+ctrl-shift-2 = 'move-node-to-workspace --focus-follows-window 2'
+
+ctrl-f = 'fullscreen'
+
+ctrl-shift-w = 'join-with right'
+ctrl-shift-q = 'flatten-workspace-tree'
+
+[[on-window-detected]]
+if.app-id = 'com.1password.1password'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = ['layout floating']

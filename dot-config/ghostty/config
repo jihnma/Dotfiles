@@ -1,0 +1,8 @@
+auto-update = off
+macos-titlebar-style = hidden
+
+window-padding-x = 16
+window-padding-y = 16
+window-padding-balance = true
+
+config-file =?~/.config/ghostty/config.local

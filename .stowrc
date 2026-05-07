@@ -1,0 +1,4 @@
+--verbose
+--dotfiles
+--no-folding
+--ignore=.stowrc

@@ -1,0 +1,18 @@
+[user]
+useConfigOnly = true
+
+[core]
+editor = hx
+excludesfile = ~/.config/ignore
+
+[init]
+defaultBranch = main
+
+[push]
+default = matching
+
+[pull]
+rebase = false
+
+[include]
+path = ~/.config/git/config.local

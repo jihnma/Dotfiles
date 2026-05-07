@@ -1,0 +1,10 @@
+theme = 'base16_transparent'
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+C-s = ':w'
+
+[keys.insert]
+j.k = 'normal_mode'
