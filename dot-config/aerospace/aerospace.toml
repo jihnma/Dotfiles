@@ -1,5 +1,8 @@
 config-version = 2
-persistent-workspaces = ["1", "2", "3"]
+
+persistent-workspaces = ["1", "2", "3", "4"]
+on-focus-changed = ['move-mouse window-lazy-center']
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 [gaps]
 inner.horizontal = 8
@@ -10,14 +13,15 @@ outer.top = 8
 outer.bottom = 8
 
 [mode.main.binding]
-ctrl-h = 'focus left'
+ctrl-h = 'focus --boundaries all-monitors-outer-frame --boundaries-action stop left'
 ctrl-j = 'focus down'
 ctrl-k = 'focus up'
-ctrl-l = 'focus right'
+ctrl-l = 'focus --boundaries all-monitors-outer-frame --boundaries-action stop right'
 
 ctrl-1 = 'workspace 1'
 ctrl-2 = 'workspace 2'
-ctrl-3 = 'workspace 3'
+ctrl-3 = 'summon-workspace 3' # nomad - follows me
+ctrl-4 = 'workspace 4'
 
 ctrl-shift-h = 'move left'
 ctrl-shift-j = 'move down'
@@ -26,11 +30,19 @@ ctrl-shift-l = 'move right'
 
 ctrl-shift-1 = 'move-node-to-workspace --focus-follows-window 1'
 ctrl-shift-2 = 'move-node-to-workspace --focus-follows-window 2'
+ctrl-shift-3 = 'move-node-to-workspace --focus-follows-window 3'
+ctrl-shift-4 = 'move-node-to-workspace --focus-follows-window 4'
 
 ctrl-f = 'fullscreen'
 
+ctrl-shift-minus = 'resize smart -50'
+ctrl-shift-equal = 'resize smart +50'
+
 ctrl-shift-w = 'join-with right'
 ctrl-shift-q = 'flatten-workspace-tree'
+
+[workspace-to-monitor-force-assignment]
+1 = ['secondary', 'main']
 
 [[on-window-detected]]
 if.app-id = 'com.1password.1password'
@@ -38,7 +50,7 @@ run = ['layout floating']
 
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
-run = ['move-node-to-workspace 3']
+run = ['move-node-to-workspace 4']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'

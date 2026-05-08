@@ -5,4 +5,11 @@ window-padding-x = 16
 window-padding-y = 16
 window-padding-balance = true
 
+mouse-hide-while-typing = true
+
+keybind = ctrl+q=activate_key_table:scroll
+keybind = scroll/j=scroll_page_fractional:0.5
+keybind = scroll/k=scroll_page_fractional:-0.5
+keybind = scroll/escape=deactivate_key_table
+
 config-file =?~/.config/ghostty/config.local

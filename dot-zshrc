@@ -5,3 +5,7 @@ pt_icon=
 
 PROMPT="$pt_icon "
 RPROMPT="%F{8}%~%f"
+
+alias cl='clear'
+alias ls='ls -al'
+alias gprune='git fetch --prune && git branch -vv | awk "/: gone\]/ {print \$1}" | xargs -r git branch -D'
