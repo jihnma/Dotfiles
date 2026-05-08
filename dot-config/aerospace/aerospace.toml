@@ -34,6 +34,7 @@ ctrl-shift-3 = 'move-node-to-workspace --focus-follows-window 3'
 ctrl-shift-4 = 'move-node-to-workspace --focus-follows-window 4'
 
 ctrl-f = 'fullscreen'
+ctrl-slash = 'layout tiles accordion'
 
 ctrl-shift-minus = 'resize smart -50'
 ctrl-shift-equal = 'resize smart +50'
